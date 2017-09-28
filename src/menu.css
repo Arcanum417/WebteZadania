@@ -1,0 +1,6 @@
+ul.menu {
+    list-style-type: none;
+}
+li.menu {
+    display: inline;
+}

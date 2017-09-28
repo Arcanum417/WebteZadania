@@ -1,16 +1,19 @@
 <!DOCTYPE html>
 <html lang="sk">
 <head>
+
     <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="rozvrh.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
     <title>Webte Zadanie #1: HTML+CSS</title>
 </head>
 <body>
 <header><h1>Webte Zadanie #1: HTML+CSS</h1></header>
 <nav>
-    <ul>
-        <li><a href="index.html">O mne</a></li>
-        <li><a href="rozvrh.html">Môj rozvrh</a></li>
-        <li><a href="kontakt.html">Kontakt</a></li>
+    <ul class="menu">
+        <li class="menu"><a href="index.html">O mne</a></li>
+        <li class="menu"><a href="rozvrh.html">Môj rozvrh</a></li>
+        <li class="menu"><a href="kontakt.html">Kontakt</a></li>
     </ul>
 </nav>
 
@@ -22,7 +25,7 @@
         <th>7.00-7.50</th>
         <th>8.00-8.50</th>
         <th>9.00-9.50</th>
-        <th>10.00-10.50</th>
+        <th colspan="2">10.00-10.50</th>
         <th>11.00-11.50</th>
         <th>12.00-12.50</th>
         <th>13.00-13.50</th>
@@ -36,6 +39,50 @@
         <th>21.00-21.50</th>
     </tr>
     <tr>
+        <td rowspan="2">Po</td>
+        <td colspan="7" rowspan="2"></td>
+        <td colspan="2" rowspan="2" class="prednaska">MAKO<br>ab300</td>
+        <td colspan="2" class="prednaska">LA<br>ab300</td>
+        <td colspan="5" rowspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="2" class="prednaska">WEBTE1<br>cd150</td>
+    </tr>
+    <tr>
+        <td>Ut</td>
+        <td></td>
+        <td colspan="3" class="prednaska">OS<br>bc300</td>
+        <td colspan="2" class="cviko">OS<br>c117a</td>
+        <td></td>
+        <td colspan="2"class="cviko">SWI<br>c015</td>
+        <td colspan="7"></td>
+    </tr>
+    <tr>
+        <td>St</td>
+        <td colspan="7"></td>
+        <td colspan="2" class="prednaska">AZA<br>cd300</td>
+        <td colspan="7"></td>
+    </tr>
+    <tr>
+        <td rowspan="2">Št</td>
+        <td colspan="2" rowspan="2"></td>
+        <td colspan="2" rowspan="2" class="tk">TK<br>Posil</td>
+        <td rowspan="2"></td>
+        <td colspan="2" rowspan="2" class="cviko">LA<br>c802</td>
+        <td colspan="2" rowspan="2" class="prednaska">SWI<br>bc300</td>
+        <td colspan="2" class="prednaska">FYZ2<br>bc150</td>
+        <td colspan="5" rowspan="2"></td>
+    </tr>
+    <tr>
+        <td colspan="2" class="prednaska">WEBTE1<br>cd150</td>
+    </tr>
+    <tr>
+        <td>Pi</td>
+        <td colspan="2"></td>
+        <td colspan="3"class="cviko">WEBTE1<br>cpu-e</td>
+        <td colspan="2"class="cviko">AZA<br>cd150</td>
+        <td colspan="3"class="cviko">FYZ2<br>a202</td>
+        <td colspan="6"></td>
     </tr>
 </table>
 
