@@ -1,0 +1,64 @@
+.fotka{
+    padding-right:20px;
+    padding-bottom:20px;
+    float:left;
+    width:474px;
+    height:427px;
+}
+.citat{
+    text-align: center;
+    font-size:24px;
+    display:block;
+    width:100px;
+    float:right;
+    padding-top:100px;
+    padding-right:150px;
+}
+
+div.tooltip span {
+    display:none;
+    z-index: -1;
+}
+div.tooltip:hover span {
+    display:block;
+    position: absolute;
+    top: -5px;
+    left: 30px;
+    background: #333;
+    color: #fff;
+    width: 250px;
+    z-index: 3;
+}
+
+#mapaMarkers{
+    position:relative;
+}
+
+#mapa{
+    position:relative;
+    z-index:1;
+}
+.marker{
+    width:30px;
+    z-index:2;
+}
+#marker1{
+    position:absolute;
+    left:34px;
+    top:305px;
+}
+#marker2{
+    position:absolute;
+    left:116px;
+    top:260px;
+}
+#marker3{
+    position:absolute;
+    left:196px;
+    top:280px;
+}
+#marker4{
+    position:absolute;
+    left:205px;
+    top:140px;
+}
