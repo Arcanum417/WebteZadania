@@ -5,6 +5,7 @@
     <link rel="stylesheet" type="text/css" href="menu.css">
     <link rel="stylesheet" type="text/css" href="mystyle.css">
     <script src="skoly.js"></script>
+    <script src="validate.js"></script>
     <title>Webte Zadanie #3: Formuláre</title>
 </head>
 <body>
@@ -21,41 +22,52 @@
 
 <h2>Formular</h2>
 <h2>Zakaznicky prieskum</h2>
-<form>
-    Datum narodenia:
-    <input type="date" name="datumNarodenia"><br>
-    Vek:
-    <input type="number" name="vek" ><br>
+<form onsubmit="return validateForm()" action="http://vmzakova.fei.stuba.sk/form2mail/form2mail.php" method="post" enctype="multipart/form-data">
+
+    <input type="hidden" name="apikey" value="a00bcc7de3e92bb7dffd680fc07c4844">
+    <input type="hidden" name="from" value="no-reply@nobody.com">
+    <input type="hidden" name="sender" value="">
+    <input type="hidden" name="to" value="lubos.len@gmail.com">
+    <input type="hidden" name="subject" value="Lubos Lendac">
+    <input type="hidden" name="redirectOk" value="http://NoTaFungujeTo.com">
+    <input type="hidden" name="redirectFalse" value="http://TaTotoNefunguje.com">
+
+    Datum narodenia:*
+    <input type="date" id="datumNarodenia" name="datumNarodenia" required><br>
+    Vek:*
+    <input type="number" id="vek" name="vek" required><br>
     Kde ste videli našu reklamu ?<br>
     <input type="checkbox" name="referral1" value="YT"> Youtube<br>
     <input type="checkbox" name="referral2" value="FB"> Facebook<br>
     <input type="checkbox" name="referral3" value="BB"> Billboard<br>
     <input type="checkbox" name="referral4" value="Noviny"> Noviny<br>
-    <input type="checkbox" id="ine" name="referra9"> Iné
-    <input type="text" id="ineText" name="referra10"><br>
+    <input type="checkbox" id="ine" name="referral10" value="Ine"> Iné
+    <input type="text" id="ineText" name="referral11"><br>
     <br>
 
-    <select name="skola" id="vyberSkola" size="1">
+    <select name="skola" id="vyberSkola" size="1" required>
         <option value="" selected="selected">Vyber skolu</option>
-    </select>
+    </select>*
     <br>
     <br>
-    <select name="fakulta" id="vyberFakulta" size="1">
+    <select name="fakulta" id="vyberFakulta" size="1" required>
         <option value="" selected="selected">Najprv vyber skolu</option>
-    </select>
+    </select>*
     <br>
     <br>
-    <select name="odbor" id="vyberOdbor" size="1">
+    <select name="odbor" id="vyberOdbor" size="1" required>
         <option value="" selected="selected">Najprv vyber fakultu</option>
-    </select>
+    </select>*
 
     <br><br>
 
 
-    Email: <input type="email" name="email"><br><br>
+    Email: <input type="email" name="email" required><br><br>
 
     <textarea name="pripomienky" rows="10" cols="30">Dalsie pripomienky:</textarea>
     <input type="hidden" name="Autor" value="Lubos Lendac">
+    <br>
+    <input type="submit" id="submitButton" value="Submit">
 </form>
 
 <footer>Copyright: 2017 Ľuboš Lendáč</footer>
