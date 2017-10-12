@@ -62,3 +62,14 @@ div.tooltip:hover span {
     left:205px;
     top:140px;
 }
+
+
+#ineText
+{
+    display: none;
+}
+
+#ine:checked ~ #ineText
+{
+    display: inline-block;
+}

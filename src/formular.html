@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <script src="skoly.js"></script>
+    <title>Webte Zadanie #3: Formuláre</title>
+</head>
+<body>
+<header><h1>Webte Zadanie #3: Formuláre</h1></header>
+<nav>
+    <ul class="menu">
+        <li class="menu"><a href="index.html">O mne</a></li>
+        <li class="menu"><a href="rozvrh.html">Môj rozvrh</a></li>
+        <li class="menu"><a href="kontakt.html">Kontakt</a></li>
+        <li class="menu"><a href="map.html">Mapa</a></li>
+        <li class="menu"><a href="formular.html">Formular</a></li>
+    </ul>
+</nav>
+
+<h2>Formular</h2>
+<h2>Zakaznicky prieskum</h2>
+<form>
+    Datum narodenia:
+    <input type="date" name="datumNarodenia"><br>
+    Vek:
+    <input type="number" name="vek" ><br>
+    Kde ste videli našu reklamu ?<br>
+    <input type="checkbox" name="referral1" value="YT"> Youtube<br>
+    <input type="checkbox" name="referral2" value="FB"> Facebook<br>
+    <input type="checkbox" name="referral3" value="BB"> Billboard<br>
+    <input type="checkbox" name="referral4" value="Noviny"> Noviny<br>
+    <input type="checkbox" id="ine" name="referra9"> Iné
+    <input type="text" id="ineText" name="referra10"><br>
+    <br>
+
+    <select name="skola" id="vyberSkola" size="1">
+        <option value="" selected="selected">Vyber skolu</option>
+    </select>
+    <br>
+    <br>
+    <select name="fakulta" id="vyberFakulta" size="1">
+        <option value="" selected="selected">Najprv vyber skolu</option>
+    </select>
+    <br>
+    <br>
+    <select name="odbor" id="vyberOdbor" size="1">
+        <option value="" selected="selected">Najprv vyber fakultu</option>
+    </select>
+
+    <br><br>
+
+
+    Email: <input type="email" name="email"><br><br>
+
+    <textarea name="pripomienky" rows="10" cols="30">Dalsie pripomienky:</textarea>
+    <input type="hidden" name="Autor" value="Lubos Lendac">
+</form>
+
+<footer>Copyright: 2017 Ľuboš Lendáč</footer>
+</body>
+</html>
