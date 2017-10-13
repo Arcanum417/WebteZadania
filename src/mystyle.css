@@ -73,3 +73,8 @@ div.tooltip:hover span {
 {
     display: inline-block;
 }
+
+.formRadio
+{
+    display: none;
+}
