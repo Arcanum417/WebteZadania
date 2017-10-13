@@ -22,57 +22,83 @@
 </nav>
 
 <h2>Formular</h2>
-<h2>Zakaznicky prieskum</h2>
-<form onsubmit="return validateForm()" action="http://vmzakova.fei.stuba.sk/form2mail/form2mail.php" method="post" enctype="multipart/form-data">
+<form onsubmit="return validateForm()" action="http://vmzakova.fei.stuba.sk/form2mail/form2mail.php" method="post" enctype="multipart/form-data" class="form-style">
+    <h1>Zákaznický prieskum
+        <span>Ďakujeme za vašu spätnú väzbu</span>
+    </h1>
 
     <input type="hidden" name="apikey" value="a00bcc7de3e92bb7dffd680fc07c4844">
-    <input type="hidden" name="from" value="no-reply@nobody.noone">
-    <input type="hidden" name="sender" value="">
-    <input type="hidden" name="to" value="lubos.len@gmail.com">
+    <input type="hidden" name="from" value="no-reply@formular.tk">
+    <input type="hidden" name="sender" value="xlendac">
+    <input type="hidden" name="to" value="feistu05@gmail.com">
     <input type="hidden" name="subject" value="Lubos Lendac">
     <input type="hidden" name="redirectOk" value="http://NoTaFungujeTo.com">
     <input type="hidden" name="redirectFalse" value="http://TaTotoNefunguje.com">
 
-    Datum narodenia:*
-    <input type="date" id="datumNarodenia" name="datumNarodenia" required><br>
-    Vek:*
-    <input type="number" id="vek" name="vek" required onblur="if((!validateVek())) {alert('Vek sa nezhoduje s datumom')}"><br>
-    Kde ste videli našu reklamu ?<br>
+    <label>
+        <span>Dátum nar.:*</span>
+        <input type="date" id="datumNarodenia" name="datumNarodenia" required>
+    </label>
+
+    <label>
+    <span>Vek:*</span>
+        <input type="number" id="vek" name="vek" required onblur="if((!validateVek())) {alert('Vek sa nezhoduje s datumom')}">
+    </label>
+
+    <label>
+        <span> Kde ste videli našu reklamu ?</span>
     <input type="radio" name="choiceInternet" value="Internet" onchange="radioOptionA(this)"> Na internete<br>
     <input type="radio" name="choiceInternet" value="Mimo_Internet" onchange="radioOptionB(this)"> Tradičné inzertné médium<br>
-    <div id="R1" class="formRadio"><input type="checkbox" name="referral1" value="YT"> Youtube<br></div>
-    <div id="R2" class="formRadio"><input type="checkbox" name="referral2" value="FB"> Facebook<br></div>
-    <div id="R3" class="formRadio"><input type="checkbox" name="referral3" value="BB"> Billboard<br></div>
-    <div id="R4" class="formRadio"><input type="checkbox" name="referral4" value="Noviny"> Noviny<br></div>
+    </label>
+
+    <label>
+        <span></span>
+    <div id="R1" class="formRadio"><input type="checkbox" name="referral1" value="YT"> Youtube</div>
+    <div id="R2" class="formRadio"><input type="checkbox" name="referral2" value="FB"> Facebook</div>
+    <div id="R3" class="formRadio"><input type="checkbox" name="referral3" value="BB"> Billboard</div>
+    <div id="R4" class="formRadio"><input type="checkbox" name="referral4" value="Noviny"> Noviny</div>
     <input type="checkbox" id="ine" name="referral10" value="Ine"> Iné
-    <input type="text" id="ineText" name="referral11"><br>
-    <br>
+    <input type="text" id="ineText" name="referral11">
+    </label>
 
-    <select name="skola" id="vyberSkola" size="1" required>
-        <option value="" selected="selected">Vyber skolu</option>
-    </select>*
-    <br>
-    <br>
-    <select name="fakulta" id="vyberFakulta" size="1" required>
-        <option value="" selected="selected">Najprv vyber skolu</option>
-    </select>*
-    <br>
-    <br>
-    <select name="odbor" id="vyberOdbor" size="1" required>
-        <option value="" selected="selected">Najprv vyber fakultu</option>
-    </select>*
+    <label>
+        <span>Vyberte vašu univerzitu: *</span>
+        <select name="skola" id="vyberSkola" size="1" required>
+            <option value="" selected="selected">Vyber školu</option>
+        </select>
+    </label>
 
-    <br><br>
+    <label>
+        <span>Vyberte vašu fakultu: *</span>
+        <select name="fakulta" id="vyberFakulta" size="1" required>
+            <option value="" selected="selected">Najprv vyber školu</option>
+        </select>
+    </label>
 
+    <label>
+        <span>Vyberte váš štúdijný odbor: *</span>
+        <select name="odbor" id="vyberOdbor" size="1" required>
+            <option value="" selected="selected">Najprv vyber fakultu</option>
+        </select>
+    </label>
 
-    Email: <input type="email" id="email" name="email" required pattern=".{3,}@(.+\.){2,}.{2,4}" onblur="if(!(this.checkValidity())) {alert(this.validationMessage + ' Mailová adresa, musí obsahovať zavináč, minimálne 2 domény, pričom vrcholová doména musí mať 2-4 znaky. Pred zavináčom musia byť minimálne 3 znaky. Regex:.{3,}@(.+\.){2,}.{2,4}')}"><br><br>
+    <label>
+        <span>Email:*</span>
+        <input type="email" id="email" name="email" required pattern=".{3,}@(.+\.)+.{2,4}" onblur="if(!(this.checkValidity())) {alert(this.validationMessage + ' Mailová adresa, musí obsahovať zavináč, minimálne 2 domény, pričom vrcholová doména musí mať 2-4 znaky. Pred zavináčom musia byť minimálne 3 znaky. Regex:.{3,}@(.+\.)+.{2,4}')}"><br><br>
+    </label>
 
-    <textarea name="pripomienky" rows="10" cols="30">Dalsie pripomienky:</textarea>
+    <label>
+        <span>Pripomienky:</span>
+        <textarea name="pripomienky" rows="10" cols="30">Sem vyplňte vašu správu vývojovému týmu.</textarea>
+
+    </label>
+
+    <label>
+        <input type="submit" id="submitButton" class="button" value="Odoslať">
+    </label>
     <input type="hidden" name="Autor" value="Lubos Lendac">
-    <br>
-    <input type="submit" id="submitButton" value="Submit">
 </form>
-
+<br>
 <footer>Copyright: 2017 Ľuboš Lendáč</footer>
 </body>
 </html>
