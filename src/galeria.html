@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="galeria.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script type="text/javascript" src="photos.js"></script>
+    <script type="text/javascript" src="galeria.js"></script>
+    <title>Webte Zadanie #1: HTML+CSS</title>
+</head>
+<body onload="load()">
+<header><h1>Webte Zadanie #1: HTML+CSS</h1></header>
+<nav>
+    <ul class="menu">
+        <li class="menu"><a href="index.html">O mne</a></li>
+        <li class="menu"><a href="rozvrh.html">Môj rozvrh</a></li>
+        <li class="menu"><a href="kontakt.html">Kontakt</a></li>
+        <li class="menu"><a href="map.html">Mapa</a></li>
+        <li class="menu"><a href="formular.html">Formular</a></li>
+        <li class="menu"><a href="galeria.html">Galeria</a></li>
+    </ul>
+</nav>
+
+<div id="podklad" onclick="closeLightBox()"></div>
+
+<div class="row">
+    <div class="column">
+        <img src="img9.jpg" style="width:100%" alt="" id="obr1" onclick="openLightBox();tentoSlide(1)">
+    </div>
+    <div class="column">
+        <img src="img9.jpg" style="width:100%" alt="" id="obr2" onclick="openLightBox();tentoSlide(2)">
+    </div>
+    <div class="column">
+        <img src="img9.jpg" style="width:100%" alt="" id="obr3" onclick="openLightBox();tentoSlide(3)">
+    </div>
+    <div class="column">
+        <img src="img9.jpg" style="width:100%" alt="" id="obr4" onclick="openLightBox();tentoSlide(4)">
+    </div>
+    <div class="column">
+        <img src="img9.jpg" style="width:100%" alt="" id="obr5" onclick="openLightBox();tentoSlide(5)">
+    </div>
+</div>
+
+<div id="lightboxVrstva">
+
+    <div class="lightboxObsah">
+        <div class="title-container">
+            <p id="title"></p>
+        </div>
+        <div class="slidy">
+            <img src="img9.jpg" style="width:100%" alt="" id="obr11">
+        </div>
+
+        <div class="slidy">
+            <img src="img9.jpg" style="width:100%" alt="" id="obr12">
+        </div>
+
+        <div class="slidy">
+            <img src="img9.jpg" style="width:100%" alt="" id="obr13">
+        </div>
+
+        <div class="slidy">
+            <img src="img9.jpg" style="width:100%" alt="" id="obr14">
+        </div>
+
+        <div class="slidy">
+            <img src="img9.jpg" style="width:100%" alt="" id="obr15">
+        </div>
+
+        <a class="pred" onclick="dalsiSlide(-1)">&#x2190;</a>
+        <a class="dalsi" onclick="dalsiSlide(1)">&#x2192;</a>
+        <a class="play" onclick="prezentacia()">&#187;</a>
+        <a class="pause" onclick="prezentaciaStop()">&#10074; &#10074;</a>
+
+        <div class="popis-container">
+            <p id="popis"></p>
+        </div>
+
+    </div>
+</div>
+<footer>Copyright: 2017 Ľuboš Lendáč</footer>
+</body>
+</html>

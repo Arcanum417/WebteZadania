@@ -1,0 +1,87 @@
+#lightboxVrstva {
+    display: none;
+    position: absolute;
+    padding-top: 45px;
+    left: 0;
+    top: 0;
+    width: 100%;
+}
+
+.lightboxObsah {
+    position: relative;
+    background-color: white;
+    margin: auto;
+    padding: 0;
+    width: 70%;
+    max-width: 1080px;
+    z-index: 10;
+}
+
+#podklad {
+    display: none;
+    position: absolute;
+    margin: 0 auto;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.slidy {
+    display: none;
+}
+
+.pred,
+.dalsi,
+.play,
+.pause {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    padding: 10px;
+    margin-top: -50px;
+    color: black;
+    font-size: 23px;
+    color: white
+}
+
+.dalsi {
+    right: 0;
+}
+
+.play,
+.pause {
+    top: 99%;
+    left: 85%;
+}
+
+.pause {
+    left: 90%;
+}
+
+.popis-container, .title-container {
+    text-align: center;
+    background-color: black;
+    padding: 2px 80px;
+    color: white;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.row>.column {
+    padding: 20px 20px;
+}
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.column {
+    float: left;
+    width: 25%;
+}
