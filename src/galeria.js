@@ -48,7 +48,7 @@ function prezentaciaStop() {
 function Slide(n) {
     var i;
     var slidy = document.getElementsByClassName("slidy");
-    var captionText = document.getElementById("popis");
+    var popisText = document.getElementById("popis");
     var titleText = document.getElementById("title");
 
     if (n > slidy.length) { sIndex = 1 }
@@ -60,6 +60,6 @@ function Slide(n) {
     }
 
     slidy[sIndex - 1].style.display = "block";
-    captionText.innerHTML = jsonData.photos[sIndex - 1].description;
+    popisText.innerHTML = jsonData.photos[sIndex - 1].description;
     titleText.innerHTML = jsonData.photos[sIndex - 1].title;
 }
