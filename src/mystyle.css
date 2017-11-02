@@ -126,7 +126,6 @@ div.tooltip:hover span {
     background: #DFDFDE;
 }
 .form-style select {
-    appearance:none;
     text-indent: 0.01px;
     text-overflow: '';
     width: 50%;
