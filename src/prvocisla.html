@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="mystyle.css">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+
+    <title>Webte Zadanie #5: Web Workers</title>
+</head>
+<body>
+<header><h1>Webte Zadanie #5: Web Workers</h1></header>
+<nav>
+    <ul class="menu">
+        <li class="menu"><a href="index.html">O mne</a></li>
+        <li class="menu"><a href="rozvrh.html">Môj rozvrh</a></li>
+        <li class="menu"><a href="kontakt.html">Kontakt</a></li>
+        <li class="menu"><a href="map.html">Mapa</a></li>
+        <li class="menu"><a href="formular.html">Formular</a></li>
+        <li class="menu"><a href="galeria.html">Galeria</a></li>
+        <li class="menu"><a href="prvocisla.html">Prvocisla</a></li>
+    </ul>
+</nav>
+
+<h1>Searching prime numbers by using a web worker</h1>
+    Limit low: <input id="limit-low" type="number" value="20">
+    Limit high: <input id="limit-high" type="number" value="100">
+
+
+
+<button class="search">start</button>
+<p id="progress">1</p>
+<div id="prime-numbers"></div><br>
+
+
+<script src="prvocisla.js"></script>
+</body>
+</html>
