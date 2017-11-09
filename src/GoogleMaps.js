@@ -3,6 +3,7 @@ var directionsService;
 var directionsDisplay;
 var myCenter;
 var marker;
+var panorama;
 function initMap() {
     myCenter = new google.maps.LatLng(48.151852, 17.073345);
     var mapProp = {
@@ -33,6 +34,14 @@ function initMap() {
         radius: 5000,
         type: ['transit_station']
     }, callbackBus);
+
+    panorama = new google.maps.StreetViewPanorama(
+        document.getElementById('street-view'),
+        {
+            position: myCenter,
+            pov: {heading: 0, pitch: 0},
+            zoom: 0
+        });
 }
 
 function calculateAndDisplayRoute(directionsService, directionsDisplay, originKeyword, mode) {
@@ -96,4 +105,15 @@ function createMarker(place) {
         map: map,
         position: place.geometry.location
     });
+}
+
+
+function initialize() {
+    panorama = new google.maps.StreetViewPanorama(
+        document.getElementById('street-view'),
+        {
+            position: {lat: 37.869260, lng: -122.254811},
+            pov: {heading: 165, pitch: 0},
+            zoom: 1
+        });
 }
