@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="sk">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="menu.css">
+    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    <title>Webte Zadanie #7: Grafy</title>
+</head>
+<body>
+<header><h1>Webte Zadanie #7: Grafy</h1></header>
+<nav>
+    <ul class="menu">
+        <li class="menu"><a href="index.html">O mne</a></li>
+        <li class="menu"><a href="rozvrh.html">Môj rozvrh</a></li>
+        <li class="menu"><a href="kontakt.html">Kontakt</a></li>
+        <li class="menu"><a href="map.html">Mapa</a></li>
+        <li class="menu"><a href="formular.html">Formular</a></li>
+        <li class="menu"><a href="galeria.html">Galeria</a></li>
+        <li class="menu"><a href="GoogleMaps.html">GoogleMaps</a></li>
+        <li class="menu"><a href="plotly.html">Plotly</a></li>
+    </ul>
+</nav>
+<div id="graph"></div>
+<script src="plotly.js"></script>
+<button onclick=endPlot()>Koniec</button>
+<input type="checkbox" id="zero" onchange=toggleTrace(0,this) checked> Y1
+<input type="checkbox" id="first" onchange=toggleTrace(1,this) checked> Y2
+</body>
+</html>
